@@ -18,3 +18,5 @@ function coachDataOverview(arr, setName, newArray) {
 }
 
 coachDataOverview(jsonData, coachesMapped, usersAssigned);
+
+
