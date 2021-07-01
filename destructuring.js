@@ -4,12 +4,18 @@ const jsonData = [
 
 const practice = [];
 
-for (const {cduAccessCode, ufcAccessCode} of jsonData) {
-    
+for (const {cduAccessCode: a, ufcAccessCode:b} of jsonData) {
+    // console.log(`${a}:${b}`);
+
+    jsonData.forEach( () => {
+        practice.push(a);
+    });
 }
 
-jsonData.forEach( () => {
-    practice.push(cduAccessCode);
-})
+console.log(practice);
 
-console.log(pratice);
+// jsonData.forEach( () => {
+//     practice.push(cduAccessCode);
+// })
+
+// console.log(practice);

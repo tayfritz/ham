@@ -12,11 +12,19 @@ function coachDataOverview(arr, setName, newArray) {
     setName.forEach( (item) => {
         newArray.push(item);
     })
-    console.log(`The HAM Tool mapped users to ${setName.size} coaches.`);
+    console.log(`The HAM Tool mapped ${arr.length} users to ${setName.size} coaches.`);
     console.log(setName);
-    console.log(newArray)
+    // console.log(newArray)
 }
 
 coachDataOverview(jsonData, coachesMapped, usersAssigned);
 
+
+// console.log(jsonData.length);
+
+// for (let i=0; i<jsonData.length; i++) {
+//     if (coachesMapped.values === jsonData[i]["cduAccessCode"]) {
+//         console.log(jsonData[i]["ufcAccessCode"]);
+//     }
+// }
 
