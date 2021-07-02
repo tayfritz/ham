@@ -27,12 +27,12 @@ for (let i=0;i<coachCount;i++) {
     coachThatWasMapped.appendChild(li);
 }
 
-for (let i=0;i<coachCount;i++) {
-    // Assign user values to li and push to user div
-    const li = document.createElement('li');
-    li.textContent = `UFCs: ${Object.values(coaches)[i]}`
-    usersThatWereMapped.appendChild(li);
-}
+// for (let i=0;i<coachCount;i++) {
+//     // Assign user values to li and push to user div
+//     const li = document.createElement('li');
+//     li.textContent = `UFCs: ${Object.values(coaches)[i]}`
+//     usersThatWereMapped.appendChild(li);
+// }
 
 
 
