@@ -16,7 +16,6 @@ jsonData.forEach((userMapped) => {
 const keys = Object.keys(coaches);
 const values = Object.values(coaches);
 
-
 for (let i=0;i<keys.length;i++) {
     const coachCdu = `Coach: ${keys[i]}`
     console.log(coachCdu);
@@ -29,4 +28,4 @@ for (let i=0;i<keys.length;i++) {
 }
 
 
-// Print to DOM or export to CSV
+// TODO: Print to DOM or export to CSV
