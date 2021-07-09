@@ -15,17 +15,24 @@ jsonData.forEach((userMapped) => {
 
 const keys = Object.keys(coaches);
 const values = Object.values(coaches);
+const coachDiv = document.getElementById('coaches');
+
 
 for (let i=0;i<keys.length;i++) {
-    const coachCdu = `Coach: ${keys[i]}`
-    console.log(coachCdu);
+    const coachCdu = `CDU: ${keys[i]}`
+    const li = document.createElement('li');
+    li.textContent = coachCdu;
+    coachDiv.appendChild(li);
+    // console.log(coachCdu);
     const userUfc = `Users Assigned:`
-    console.log(userUfc);
+    // console.log(userUfc);
     values[i].users.forEach( (p) => {
         const users = p;
-        console.log(p);
+        // console.log(p);
     });
 }
 
 
 // TODO: Print to DOM or export to CSV
+// TODO: Host page on GH Pages
+
