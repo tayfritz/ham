@@ -16,20 +16,28 @@ jsonData.forEach((userMapped) => {
 const keys = Object.keys(coaches);
 const values = Object.values(coaches);
 const coachDiv = document.getElementById('coaches');
-
+const userCount = document.getElementById('user-count');
+const userDiv = document.getElementById('ufc-codes');
 
 for (let i=0;i<keys.length;i++) {
-    const coachCdu = `CDU: ${keys[i]}`
-    const li = document.createElement('li');
-    li.textContent = coachCdu;
-    coachDiv.appendChild(li);
-    // console.log(coachCdu);
-    const userUfc = `Users Assigned:`
-    // console.log(userUfc);
-    values[i].users.forEach( (p) => {
-        const users = p;
-        // console.log(p);
-    });
+    // Grab CDU and print to DOM
+    const coachCdu = `${keys[i]}`
+    const coachUl = document.createElement('ul');
+    coachUl.textContent = coachCdu;
+    coachDiv.appendChild(coachUl);
+
+    const count = values[i].length;
+    const counterP = document.createElement('p');
+    counterP.textContent = count;
+    userCount.appendChild(counterP);
+
+    // values[i].users.forEach( (p) => {
+    //     userCount.appendChild(countP);
+        
+    //     const userUl = document.createElement('ul');
+    //     userUl.textContent = p;
+    //     userDiv.appendChild(userUl);
+    // });
 }
 
 
