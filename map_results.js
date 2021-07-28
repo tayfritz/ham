@@ -20,13 +20,14 @@ const mappedDiv = document.getElementById('mapped-results');
 
 for (coach in coaches) {
     const coachDiv = document.createElement('div')
+    coachDiv.setAttribute('class', 'CARD')
     const cduP = document.createElement('p');
     cduP.textContent = `CDU: ${coach}`
     const ufcCount = document.createElement('p');
     const usersArray = coaches[coach].users;
     ufcCount.textContent = `UFC Count: ${usersArray.length}`
     const ufcUl = document.createElement('ul');
-    ufcUl.textContent = `UFCs Mapped: `;
+    ufcUl.textContent = `UFCs MAPPED: `;
     mappedDiv.appendChild(coachDiv);
     coachDiv.appendChild(cduP);
     coachDiv.appendChild(ufcCount);
