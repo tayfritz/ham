@@ -15,30 +15,42 @@ jsonData.forEach((userMapped) => {
 
 const keys = Object.keys(coaches);
 const values = Object.values(coaches);
-const coachDiv = document.getElementById('coaches');
-const userCount = document.getElementById('user-count');
-const userDiv = document.getElementById('ufc-codes');
+const mappedDiv = document.getElementById('mapped-results');
 
-for (let i=0;i<keys.length;i++) {
-    // Grab CDU and print to DOM
-    const coachCdu = `${keys[i]}`
-    const coachUl = document.createElement('ul');
-    coachUl.textContent = coachCdu;
-    coachDiv.appendChild(coachUl);
 
-    const count = values[i].length;
-    const counterP = document.createElement('p');
-    counterP.textContent = count;
-    userCount.appendChild(counterP);
-
-    // values[i].users.forEach( (p) => {
-    //     userCount.appendChild(countP);
-        
-    //     const userUl = document.createElement('ul');
-    //     userUl.textContent = p;
-    //     userDiv.appendChild(userUl);
-    // });
+for (coach in coaches) {
+    const coachDiv = document.createElement('div')
+    const cduP = document.createElement('p');
+    cduP.textContent = `CDU: ${coach}`
+    const ufcCount = document.createElement('p');
+    const usersArray = coaches[coach].users;
+    ufcCount.textContent = `UFC Count: ${usersArray.length}`
+    const ufcUl = document.createElement('ul');
+    ufcUl.textContent = `UFCs Mapped: `;
+    mappedDiv.appendChild(coachDiv);
+    coachDiv.appendChild(cduP);
+    coachDiv.appendChild(ufcCount);
+    coachDiv.appendChild(ufcUl);
+    for (ufc in usersArray) {
+        let li = document.createElement("li");
+        li.textContent = `${usersArray[ufc]}`
+        ufcUl.appendChild(li);
+    }
 }
+
+// for (let i=0;i<keys.length;i++) {
+//     // Grab CDU and print to DOM
+//     const coachCdu = `${keys[i]}`
+//     const coachUl = document.createElement('ul');
+//     coachUl.textContent = coachCdu;
+//     coachDiv.appendChild(coachUl);
+
+//     const count = values[i].length;
+//     const counterP = document.createElement('p');
+//     counterP.textContent = count;
+//     userCount.appendChild(counterP);
+// }
+
 
 
 // TODO: Print to DOM or export to CSV
