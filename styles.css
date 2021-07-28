@@ -9,14 +9,14 @@ header {
 
 #mapped-results {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: stretch;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
 .CARD {
     width: 40%;
-    min-width: fit-content;
+    min-height: 100%;
     margin: 20px;
     padding: 20px;
     background: white;
