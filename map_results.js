@@ -38,20 +38,6 @@ for (coach in coaches) {
     }
 }
 
-// for (let i=0;i<keys.length;i++) {
-//     // Grab CDU and print to DOM
-//     const coachCdu = `${keys[i]}`
-//     const coachUl = document.createElement('ul');
-//     coachUl.textContent = coachCdu;
-//     coachDiv.appendChild(coachUl);
-
-//     const count = values[i].length;
-//     const counterP = document.createElement('p');
-//     counterP.textContent = count;
-//     userCount.appendChild(counterP);
-// }
-
-
 
 // TODO: Print to DOM or export to CSV
 // TODO: Host page on GH Pages
