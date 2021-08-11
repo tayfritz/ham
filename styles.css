@@ -7,6 +7,12 @@ header {
     text-align: center;
 }
 
+#file-uploader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #mapped-results {
     display: flex;
     align-items: stretch;

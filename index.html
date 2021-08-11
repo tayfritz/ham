@@ -13,7 +13,13 @@
             <h1> HAM TOOL OVERVIEW </h1>
         </header>
         <main>
+            <!-- TODO: Get file reader working -->
+            <div id='file-uploader'></div>
+                <input type='file' name='data-file' id='data-file' accept=".json">
+            </div>
+            
             <div id='mapped-results'>
+                <!-- CARDS dynamically created through map_results.js -->
             </div>
         </main>
         <script src="map_results.js" async defer></script>
