@@ -33,6 +33,10 @@ header {
     box-shadow: 4px 6px 50px rgb(0 0 0 / 20%);
 }
 
-ul {
+li {
     list-style-type: none;
 }
+
+/* p {
+    background-color: rgba(192, 243, 182, 0.651);
+} */

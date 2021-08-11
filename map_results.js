@@ -22,20 +22,23 @@ for (coach in coaches) {
     const coachDiv = document.createElement('div')
     coachDiv.setAttribute('class', 'CARD')
     const cduP = document.createElement('p');
+    cduP.setAttribute('class', 'cduP');
     cduP.textContent = `CDU: ${coach}`
     const ufcCount = document.createElement('p');
     const usersArray = coaches[coach].users;
     ufcCount.textContent = `UFC Count: ${usersArray.length}`
-    const ufcUl = document.createElement('ul');
-    ufcUl.textContent = `UFCs MAPPED: `;
+    const ufcP = document.createElement('p');
+    ufcP.textContent = `UFCs MAPPED: `;
     mappedDiv.appendChild(coachDiv);
     coachDiv.appendChild(cduP);
     coachDiv.appendChild(ufcCount);
-    coachDiv.appendChild(ufcUl);
+    coachDiv.appendChild(ufcP);
+    const holdingUl = document.createElement('ul');
+    coachDiv.appendChild(holdingUl);
     for (ufc in usersArray) {
         let li = document.createElement("li");
         li.textContent = `${usersArray[ufc]}`
-        ufcUl.appendChild(li);
+        holdingUl.appendChild(li);
     }
 }
 
