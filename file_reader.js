@@ -11,23 +11,34 @@ alertDiv.style.display = 'none';
 
 function validateInputs() {
      // Check that all inputs have been received
+     let counter = 0;
      alertDiv.innerHTML = '<p> Please provide the following in order to proceed: </p>'
      if (dataTitle.value === "") {
-         alertDiv.style.display = 'block';
-         alertDiv.innerHTML += ' <p> - Report Title </p>';
-     } else {
-        alertDiv.style.display = 'none';
-     }
+        counter += 1;
+        alertDiv.style.display = 'block';
+        alertDiv.innerHTML += ' <p> - Report Title </p>';
+     } 
+
      if (dataDate.value === "") {
-         alertDiv.style.display = 'block';
-         alertDiv.innerHTML += '<p> - Report Date </p>';
-     } else {
+        counter += 1;
+        alertDiv.style.display = 'block';
+        alertDiv.innerHTML += '<p> - Report Date </p>';
+     } 
+
+     if (dataUploader.value === "") {
+        counter += 1;
+        alertDiv.style.display = 'block';
+        alertDiv.innerHTML += '<p> - Report File </p>';
+    } 
+    // If all inputs are OK, hide the div
+    if (counter === 0) {
         alertDiv.style.display = 'none';
-     }
+    }
 }
 
 generateReportBtn.addEventListener('click', () => {
-   validateInputs();
+    validateInputs();
+
 });
 
 
