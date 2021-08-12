@@ -33,12 +33,31 @@ function validateInputs() {
     // If all inputs are OK, hide the div
     if (counter === 0) {
         alertDiv.style.display = 'none';
+        return true;
     }
 }
 
-generateReportBtn.addEventListener('click', () => {
-    validateInputs();
+function readFile(fileToRead) {
+    let json = JSON.stringify(fileToRead);
+    const blob = new Blob([json], {type:"application/json"});
+    const reader = new FileReader();
+    reader.addEventListener('load', e => {
+        console.log(JSON.parse(reader.result));
+    })
+    reader.readAsText(blob);
+}
 
+let jsonData = [];
+
+generateReportBtn.addEventListener('click', () => {
+    let filePath;
+    if (validateInputs() === true) {
+        let file = dataUploader.files[0];
+        filePath = `./${file.name}`.toString();
+        // console.log(filePath);
+        // console.log(typeof filePath);
+        readFile(filePath);
+    }
 });
 
 

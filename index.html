@@ -15,16 +15,18 @@
         <main>
             <!-- TODO: Get file reader working -->
             <div id='file-uploader'></div>
-                <label name='data-title'>Report Title:</label>
-                <input type='text' name='data-title' id='data-title'></br>
+                <!-- <form class='form' action="./upload" method="post" enctype="multipart/form-data"> -->
+                    <label name='data-title'>Report Title:</label>
+                    <input type='text' name='data-title' id='data-title'></br>
 
-                <label name='data-date'>Report Date:</label>
-                <input type='date' name='data-date' id='data-date'></br>
-                
-                <input type='file' name='data-file' id='data-file' accept=".json"></br>
+                    <label name='data-date'>Report Date:</label>
+                    <input type='date' name='data-date' id='data-date'></br>
+                    
+                    <input type='file' name='data-file' id='data-file' accept=".json"></br>
 
-                <button id='report-summ'>Generate Report</button></br>
-                <button id='export-to-csv' style='display:none'>Export to CSV</button></br>
+                    <button id='report-summ'>Generate Report</button></br>
+                    <button id='export-to-csv' style='display:none'>Export to CSV</button></br>
+                <!-- </form> -->
             </div>
             
             <div id='mapped-results'>
