@@ -13,6 +13,10 @@ header {
     justify-content: center;
 }
 
+#input-alert {
+    text-align: center;
+}
+
 #mapped-results {
     display: flex;
     align-items: stretch;
